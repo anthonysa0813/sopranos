@@ -26,7 +26,7 @@ const Formulario = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!userPass.trim()) {
-      console.log("Userpass no existee");
+      console.log("Userpass no existeeeee");
       return;
     }
     const permisoValidation = claves.find((c) => c.clave === userPass); //[]
