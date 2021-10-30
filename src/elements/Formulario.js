@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 const Form = styled.form`
   display: flex;
+  height: inherit;
+  /* justify-content: space-between; */
   flex-direction: column;
   padding-inline: 1rem;
+  gap: 0.5rem;
 `;
 
 const Label = styled.label`
@@ -13,7 +16,7 @@ const Label = styled.label`
 
 const InputForm = styled.input`
   padding: 0.5rem 0.75rem;
-  margin-block-end: 1rem;
+  /* margin-block-end: 1rem; */
 `;
 
 const Boton = styled.button`
@@ -23,4 +26,14 @@ const Boton = styled.button`
   border: none;
   border-radius: 0.3rem;
 `;
-export { Form, Label, InputForm, Boton };
+
+const Select = styled.select`
+  padding: 0.5rem 0.75rem;
+`;
+
+const Option = styled.option`
+  border: none;
+  margin-block-start: 1rem;
+`;
+
+export { Form, Label, InputForm, Boton, Select, Option };

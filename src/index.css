@@ -26,3 +26,7 @@ code {
 .debug {
   border: 1px solid red;
 }
+
+.text-center {
+  text-align: center;
+}
