@@ -7,9 +7,12 @@ const UserBoxProvider = (props) => {
     box: "",
     local: "CHORRILLOS",
   });
+  const [showForm, setShowForm] = useState(false);
 
   return (
-    <UserBoxContext.Provider value={{ userBox, setUserBox }}>
+    <UserBoxContext.Provider
+      value={{ userBox, setUserBox, showForm, setShowForm }}
+    >
       {props.children}
     </UserBoxContext.Provider>
   );

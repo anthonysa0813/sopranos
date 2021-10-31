@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HeaderContainer, Menu } from "../../elements/Header";
+import { NavLink } from "react-router-dom";
+import { UserBoxContext } from "../../context/UserBox";
 
 const Header = () => {
+  const { showForm, setShowForm } = useContext(UserBoxContext);
+
+  const handleClick = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <header className="">
       <div className="wrapper">
         <HeaderContainer className="header-container">
-          <h1 className="logo-name">Sopranos Karaoke</h1>
+          <NavLink className="logo-name" to="/">
+            Sopranos Karaoke
+          </NavLink>
           <nav className="nav">
             <Menu className="menu">
               <li>
-                <a href="#">Admin</a>
+                <NavLink to="/admin" onClick={handleClick}>
+                  Admin
+                </NavLink>
               </li>
               <li>
-                <a href="#">Visita</a>
+                <NavLink to="/login" onClick={handleClick}>
+                  Visita
+                </NavLink>
               </li>
             </Menu>
           </nav>
