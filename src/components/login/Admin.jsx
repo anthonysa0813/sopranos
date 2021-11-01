@@ -33,8 +33,8 @@ const Admin = (props) => {
       const arrayData = snapshot.docs.map((doc) => {
         return doc.data();
       });
-      console.log(`las claves en admin son: ${arrayData}`);
       setClaves(arrayData);
+      console.log(`las claves en admin son:`, arrayData);
     });
   }, []);
   const handleSubmit = (e) => {
@@ -47,8 +47,10 @@ const Admin = (props) => {
       return;
     }
     setUserAdmin({ local: adminLocal });
+    console.log("la clave del input es: ", claveForm);
 
     const claveExists = claves.find((c) => c.clave === claveForm);
+    claveExists ? console.log("Existe") : console.log("No existe");
     claveExists ? props.history.push("/admin-page") : setError(true);
   };
   const handleChange = (e) => {

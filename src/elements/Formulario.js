@@ -25,6 +25,11 @@ const Boton = styled.button`
   color: var(--white);
   border: none;
   border-radius: 0.3rem;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    transition: ease 0.3s all;
+  }
 `;
 
 const Select = styled.select`

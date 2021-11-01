@@ -25,59 +25,45 @@ const Usuarios = () => {
   const [musicActual, setMusicActual] = useState([]);
   const dataMusic = [
     {
-      id: 1,
       name: "dale con todo",
     },
     {
-      id: 2,
       name: "kUSH - Main",
     },
     {
-      id: 3,
       name: "why the thugs",
     },
     {
-      id: 4,
       name: "Even you brutus?",
     },
     {
-      id: 5,
       name: "You can do it",
     },
     {
-      id: 6,
       name: "It was a good day",
     },
     {
-      id: 7,
       name: "Man Down",
     },
     {
-      id: 8,
       name: "Sure thing",
     },
     {
-      id: 9,
       name: "Nocturnal",
     },
     {
-      id: 10,
       name: "Vete",
     },
     {
-      id: 11,
       name: "Free - 6BLACK",
     },
     {
-      id: 12,
       name: "Vertigo - khalid",
     },
     {
-      id: 13,
       name: "Leave me ",
     },
     {
-      id: 14,
       name: "The reign",
     },
   ];
@@ -95,7 +81,6 @@ const Usuarios = () => {
   const handleClick = async (music) => {
     console.log(music);
     await addDoc(collection(db, `sedes/${local}/list-music`), {
-      id: music.id,
       name: music.name,
     });
   };

@@ -3,6 +3,7 @@ import { HeroContainer } from "../../elements/Usuarios";
 import hero from "../../assets/images/hero2.jpg";
 import { UserAdminContext } from "../../context/AdminContext";
 import Password from "../generator/Password";
+import Dj from "../djAdmin/Dj";
 
 const AdminPage = () => {
   const { userAdmin } = useContext(UserAdminContext);
@@ -16,6 +17,7 @@ const AdminPage = () => {
       <div className="wrapper">
         <h1 className="text-center">Sede: {local} </h1>
         <Password />
+        <Dj />
       </div>
     </>
   );
